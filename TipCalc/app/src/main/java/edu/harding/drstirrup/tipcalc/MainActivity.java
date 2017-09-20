@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         catch (NumberFormatException ex) {
         //TODO: Add Toast
         //String errorMes = get.Resources().getString(R.string.error_message);
-        // Toast.makeText(this, errorMes, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Please Add a Number", Toast.LENGTH_SHORT).show();
         }
         //Win
     }
