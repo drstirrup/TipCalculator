@@ -53,6 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Win
     }
-
+    //TEST
     //Textwatcher version
 }
