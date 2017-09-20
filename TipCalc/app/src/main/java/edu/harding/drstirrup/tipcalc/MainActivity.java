@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
         }
         //Win
     }
-    //TEST GIT HUB
     //TODO:Textwatcher version
 	//Test Git Commit
 }
