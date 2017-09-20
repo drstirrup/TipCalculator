@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="bill">Bill</string>
+    <string name="tipPercent">Tip Percent</string>
+    <string name="tipAmount">Tip Amount</string>
+    <string name="total">Total</string>
+    <string name="calculate">Calculate!</string>
+    <string name="filler">"?"</string>
+</resources>
+
