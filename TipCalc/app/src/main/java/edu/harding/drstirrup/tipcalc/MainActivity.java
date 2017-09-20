@@ -37,20 +37,23 @@ public class MainActivity extends AppCompatActivity {
             String numBillStr = mBillEditText.getText().toString();
             String numTipPerStr = mTipPercentEditText.getText().toString();
             //TODO: add cheapskate Toast
-            //convert to numbers
-            float numBill = Float.parseFloat(numBillStr);
-            float numTipPer = Float.parseFloat(numTipPerStr);
+                /*
+                //convert to numbers
+                float numBill = Float.parseFloat(numBillStr);
+                float numTipPer = Float.parseFloat(numTipPerStr);
 
-            //convert tip percentage to decimal and calculate tip
-            float tip = numTipPer * numBill * .01f;
+                convert tip percentage to decimal and calculate tip
+                float tip = numTipPer * numBill * .01f;
 
-            //calculate total = tip+bill
-            float billTotal = numBill + tip;
+                //calculate total = tip+bill
+                float billTotal = numBill + tip;
+                */
+            TipCalculatorModel calc = new TipCalculatorModel(numBillStr, numTipPerStr);
 
             NumberFormat moneyFormat = NumberFormat.getCurrencyInstance();
             //send numbers to TextViews via setText
-            mTipAmount.setText(moneyFormat.format(tip));
-            mBillTotal.setText(moneyFormat.format(billTotal));
+            mTipAmount.setText(moneyFormat.format(calc.mTip));
+            mBillTotal.setText(moneyFormat.format(calc.mBillTotal));
         }
         catch (NumberFormatException ex) {
         //TODO: Add Toast
