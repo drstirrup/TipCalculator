@@ -6,5 +6,6 @@
     <string name="total">Total</string>
     <string name="calculate">Calculate!</string>
     <string name="filler">"?"</string>
+    <string name="errorMes">Please enter a number</string>
 </resources>
 

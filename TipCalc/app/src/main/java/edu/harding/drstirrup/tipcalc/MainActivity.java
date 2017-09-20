@@ -31,28 +31,33 @@ public class MainActivity extends AppCompatActivity {
 
     //This is where I put the mechanics/magic
     public void calculateClick(View view){
+        try {
+            //get strings from edit texts
+            String numBillStr = mBillEditText.getText().toString();
+            String numTipPerStr = mTipPercentEditText.getText().toString();
+            //TODO: add cheapskate Toast
+            //convert to numbers
+            float numBill = Float.parseFloat(numBillStr);
+            float numTipPer = Float.parseFloat(numTipPerStr);
 
-        //get strings from edit texts
-        String numBillStr = mBillEditText.getText().toString();
-        String numTipPerStr = mTipPercentEditText.getText().toString();
+            //convert tip percentage to decimal and calculate tip
+            float tip = numTipPer * numBill * .01f;
 
-        //convert to numbers
-        float numBill = Float.parseFloat(numBillStr);
-        float numTipPer = Float.parseFloat(numTipPerStr);
+            //calculate total = tip+bill
+            float billTotal = numBill + tip;
 
-        //convert tip percentage to decimal and calculate tip
-        float tip = numTipPer*numBill*.01f;
-
-        //calculate total = tip+bill
-        float billTotal = numBill+tip;
-
-        NumberFormat moneyFormat = NumberFormat.getCurrencyInstance();
-        //send numbers to TextViews via setText
-        mTipAmount.setText(moneyFormat.format(tip));
-        mBillTotal.setText(moneyFormat.format(billTotal));
-
+            NumberFormat moneyFormat = NumberFormat.getCurrencyInstance();
+            //send numbers to TextViews via setText
+            mTipAmount.setText(moneyFormat.format(tip));
+            mBillTotal.setText(moneyFormat.format(billTotal));
+        }
+        catch (NumberFormatException ex) {
+        //TODO: Add Toast
+        //String errorMes = get.Resources().getString(R.string.error_message);
+        // Toast.makeText(this, errorMes, Toast.LENGTH_SHORT).show();
+        }
         //Win
     }
-    //TEST
-    //Textwatcher version
+    //TEST GIT HUB
+    //TODO:Textwatcher version
 }
